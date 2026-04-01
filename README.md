@@ -89,6 +89,8 @@ UX-design link: https://www.figma.com/design/ctcGaSr803JG4xC0dsC9Ek/Untitled?nod
 https://www.figma.com/design/5YkwhfXAmgGzQNNGGe1kLf/sign-in---sign-up-page?node-id=0-1&p=f&t=r40vAvcUdfjKhqAD-0
 
 
+
+
 #### 6.1. Детальное описание элементов страницы
 
 **1. Шапка (Header)**
