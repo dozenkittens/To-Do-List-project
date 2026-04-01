@@ -86,6 +86,7 @@
 В связи с концепцией одностраничного приложения, система состоит из **одной главной страницы**, которая содержит все необходимые функциональные блоки.
 
 UX-design link: https://www.figma.com/design/ctcGaSr803JG4xC0dsC9Ek/Untitled?node-id=0-1&t=OIQ67ELivvCpg5dc-1
+https://www.figma.com/design/5YkwhfXAmgGzQNNGGe1kLf/sign-in---sign-up-page?node-id=0-1&p=f&t=r40vAvcUdfjKhqAD-0
 
 
 #### 6.1. Детальное описание элементов страницы
