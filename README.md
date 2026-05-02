@@ -311,6 +311,96 @@ Authorization: Bearer <jwt_token>
 - Левая часть: логотип или название системы «SmartTodo»
 - Правая часть: блок приветствия пользователя (например, «Привет, Пользователь!») и кнопка выхода
 
+#### 5.4 Описание типов данных
+export enum TaskStatus {
+    ACTIVE = false,
+    COMPLETED = true
+}
+
+export enum Theme {
+    LIGHT = 'light',
+    DARK = 'dark'
+}
+
+export interface User {
+    id: number;
+    fullName: string;
+    email: string;
+    passwordHash: string;
+    createdAt: Date;
+}
+
+export interface Task {
+    id: number;
+    userId: number;
+    title: string;
+    isCompleted: TaskStatus;
+    createdAt: Date;
+    completedAt: Date | null;
+}
+
+export interface Session {
+    token: string;
+    userId: number;
+    createdAt: Date;
+    expiresAt: Date;
+}
+
+export interface LoginHistory {
+    id: number;
+    userId: number;
+    loginTime: Date;
+    ipAddress: string | null;
+}
+
+export interface UserSettings {
+    id: number;
+    userId: number;
+    theme: Theme;
+    notificationsEnabled: boolean;
+}
+
+export type TaskList = Task[];
+
+export type SessionList = Session[];
+
+export type LoginHistoryList = LoginHistory[];
+
+export interface DashboardStats {
+    totalTasks: number;
+    completedTasks: number;
+    activeTasks: number;
+}
+
+export interface RegisterFormData {
+    fullName: string;
+    email: string;
+    password: string;
+    confirmPassword: string;
+}
+
+export interface LoginFormData {
+    email: string;
+    password: string;
+}
+
+export interface CreateTaskFormData {
+    title: string;
+}
+
+export interface ApiResponse<T> {
+    success: boolean;
+    data?: T;
+    message?: string;
+    errors?: string[];
+}
+
+export interface AuthResponse {
+    user: User;
+    token: string;
+    expiresAt: Date;
+}
+
 **2. Дашборд (Блок статистики)**
 
 Три информационные карточки, расположенные горизонтально в ряд:
