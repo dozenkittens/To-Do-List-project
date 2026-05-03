@@ -1,0 +1,129 @@
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #FFFFFF;
+  padding: 8px 12px 8px 8px;
+  border-radius: 20px;
+  transition: background 0.15s ease;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.task-item:hover {
+  background: #FBFBFB;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkbox-style {
+  width: 26px;
+  height: 26px;
+  background-color: #FFFFFF;
+  border: 2px solid #C2C2C2;
+  border-radius: 8px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-style svg {
+  width: 16px;
+  height: 16px;
+  stroke: white;
+  stroke-width: 3;
+  fill: none;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+}
+
+.custom-checkbox input:checked + .checkbox-style {
+  background-color: #1E1E1E;
+  border-color: #1E1E1E;
+}
+
+.custom-checkbox input:checked + .checkbox-style svg {
+  opacity: 1;
+}
+
+.custom-checkbox input:disabled + .checkbox-style {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 17px;
+  font-weight: 470;
+  color: #1D1D1D;
+  padding: 12px 0;
+  word-break: break-word;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #8F8F8F;
+}
+
+.priority-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.priority-low {
+  background: #E8F5E9;
+  color: #2E7D32;
+}
+
+.priority-medium {
+  background: #FFF3E0;
+  color: #EF6C00;
+}
+
+.priority-high {
+  background: #FFEBEE;
+  color: #C62828;
+}
+
+.delete-task {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #BDBDBD;
+  border-radius: 30px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.delete-task:hover:not(:disabled) {
+  background: #F0F0F0;
+  color: #5A5A5A;
+}
+
+.delete-task:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

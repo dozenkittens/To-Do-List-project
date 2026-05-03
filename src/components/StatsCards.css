@@ -1,0 +1,31 @@
+.stats-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: #F8F8F8;
+  flex: 1;
+  min-width: 140px;
+  border-radius: 28px;
+  padding: 20px 24px;
+  border: 1px solid #EFEFEF;
+}
+
+.stat-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #6C6C6C;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.stat-number {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1F1F1F;
+  line-height: 1.1;
+}
